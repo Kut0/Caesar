@@ -1,11 +1,11 @@
 # Caesar - Verschlüsselung
 
-clear_msg = "HALLO"
-shift = 3
-clear_msg = "zzz"
-shift = 1
-# beschränke die Verschiebung auf max 26
+clear_msg = input("Welchen Text möchstest du verschlüsseln")
+shift = int(input("Welchen Schlüssel möchtest du verwenden?"))
+
 shift = shift % 26
+# beschränke die Verschiebung auf max 26
+
 
 cypher_msg = ""
 clear_msg = clear_msg.upper()
@@ -19,6 +19,7 @@ for char in clear_msg:
     else:
         new_nb = nb
     new_char = chr(new_nb)
-    print(char, nb, new_nb, new_char)
+    #print(char, nb, new_nb, new_char)
     cypher_msg += new_char
-print(cypher_msg)
+
+print(f"Die verschlüsselte Nachricht lautet: {cypher_msg}")
